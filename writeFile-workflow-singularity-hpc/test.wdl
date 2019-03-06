@@ -16,6 +16,7 @@ task myTask {
   }
   runtime {
     task_docker_image: task_docker_image
+    memory: "10 GB"
   }
   output {
     File out = "test.out"
