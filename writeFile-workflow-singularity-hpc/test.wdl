@@ -4,18 +4,18 @@ workflow myWorkflowDocker {
 
   call myTask {
     input:
-      docker_image = gatk_docker
+      task_docker_image = gatk_docker
   }
 }
 
 task myTask {
-  String docker_image
+  String task_docker_image
 
   command {
     echo "hello world" > test.out
   }
   runtime {
-    docker: docker_image
+    task_docker_image: task_docker_image
   }
   output {
     File out = "test.out"
