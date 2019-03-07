@@ -15,7 +15,7 @@ task myTask {
     echo "hello world" > test.out
   }
   runtime {
-    task_docker_image: task_docker_image
+    docker: task_docker_image
     memory: "10 GB"
   }
   output {
