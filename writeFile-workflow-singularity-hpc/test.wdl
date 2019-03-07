@@ -2,13 +2,16 @@ workflow myWorkflowDocker {
 
   String gatk_docker
 
-  call myTask {
+  call myTaskContained {
     input:
       task_docker_image = gatk_docker
   }
+
+call myTask 
+
 }
 
-task myTask {
+task myTaskContained {
   String task_docker_image
 
   command {
@@ -21,4 +24,18 @@ task myTask {
   output {
     File out = "test.out"
   }
+}
+
+task myTask {
+
+  command {
+    echo "hello not contained" > test.notContained.out
+  }
+  runtime {
+    memory: "10 GB"
+  }
+  output {
+    File out = "test.notContained.out"
+  }
+
 }
