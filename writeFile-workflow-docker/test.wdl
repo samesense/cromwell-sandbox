@@ -12,13 +12,12 @@ task myTask {
   String docker_image
 
   command {
-    echo "hello world"
+    echo "hello world" > test.out
   }
   runtime {
     docker: docker_image
-    memory_mb: 1
   }
   output {
-    String out = read_string(stdout())
+    File out = "test.out"
   }
 }
