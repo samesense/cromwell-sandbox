@@ -5,6 +5,7 @@ workflow myWorkflowDocker {
   call myTaskContained {
     input:
       task_docker_image = gatk_docker
+      task_docker_simg = gatk_docker
   }
 
 call myTask 
@@ -12,6 +13,7 @@ call myTask
 }
 
 task myTaskContained {
+  String task_docker_simg
   String task_docker_image
 
   command {

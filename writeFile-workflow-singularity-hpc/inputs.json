@@ -1,5 +1,8 @@
 {
-  "##_COMMENT5": "DOCKERS", 
+  "##_COMMENT5": "DOCKERS",
+  "myWorkflowDocker.gotc_simg": "/home/evansj/me/projects/asif/images/gotc.simg",
+  "myWorkflowDocker.gatk_simg": "/home/evansj/me/projects/asif/images/gatk.simg",
+  "myWorkflowDocker.python_simg": "/home/evansj/me/projects/asif/images/python2.7.simg",
   "myWorkflowDocker.gotc_docker": "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786",
   "myWorkflowDocker.gatk_docker": "broadinstitute/gatk:4.0.4.0",
   "myWorkflowDocker.python_docker": "python:2.7"
